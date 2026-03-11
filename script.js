@@ -38,7 +38,7 @@ class ParticleBackground {
                 vx: (Math.random() - 0.5) * 0.3,
                 vy: (Math.random() - 0.5) * 0.3,
                 radius: 2 + Math.random() * 4,
-                opacity: 0.06 + Math.random() * 0.12,
+                opacity: 0.12 + Math.random() * 0.16,
                 // Pink-lavender palette
                 hue: Math.random() > 0.5 ? (340 + Math.random() * 20) : (230 + Math.random() * 30),
                 saturation: 50 + Math.random() * 30,
@@ -117,8 +117,8 @@ class ParticleBackground {
 
             // Soft glow
             this.ctx.beginPath();
-            this.ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
-            this.ctx.fillStyle = `hsla(${p.hue}, ${p.saturation}%, ${p.lightness}%, ${p.opacity * 0.3})`;
+            this.ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2);
+            this.ctx.fillStyle = `hsla(${p.hue}, ${p.saturation}%, ${p.lightness}%, ${p.opacity * 0.4})`;
             this.ctx.fill();
         }
 
@@ -130,8 +130,8 @@ class ParticleBackground {
                 const dx = a.x - b.x;
                 const dy = a.y - b.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 120) {
-                    const alpha = (1 - dist / 120) * 0.04;
+                if (dist < 140) {
+                    const alpha = (1 - dist / 140) * 0.07;
                     this.ctx.beginPath();
                     this.ctx.moveTo(a.x, a.y);
                     this.ctx.lineTo(b.x, b.y);
