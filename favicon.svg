@@ -1,0 +1,8 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <mask id="faviconCut">
+        <rect width="120" height="120" fill="white"/>
+        <rect x="0" y="70" width="94" height="40" fill="black"/>
+    </mask>
+    <polygon points="60,15 10,100 110,100" fill="none" stroke="#2D2D3A" stroke-width="13" stroke-linejoin="miter" mask="url(#faviconCut)"/>
+    <text x="94" y="104.5" font-family="system-ui, sans-serif" font-weight="900" font-size="18.5" letter-spacing="2" fill="#2D2D3A" text-anchor="end">&#x039B;LIGN&#x039B;</text>
+</svg>

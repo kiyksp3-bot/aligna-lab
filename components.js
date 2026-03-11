@@ -32,10 +32,16 @@ function renderHeader() {
     header.innerHTML = `
         <div class="container header-inner">
             <a href="index.html" class="logo" id="logo">
-                <svg viewBox="0 0 180 50" class="logo-svg" aria-label="ALIGNA by Beresneva">
-                    <polygon points="25,3 47,42 3,42" fill="none" stroke="#2D2D3A" stroke-width="2.5"/>
-                    <text x="62" y="22" font-family="Inter,sans-serif" font-weight="700" font-size="14" letter-spacing="5" fill="#2D2D3A">ALIGNA</text>
-                    <text x="62" y="38" font-family="Playfair Display,serif" font-weight="400" font-size="10" fill="#666">by Beresneva</text>
+                <svg viewBox="0 0 140 130" class="logo-svg" aria-label="ALIGNA by Beresneva" style="height: 48px; width: auto; overflow: visible;">
+                    <defs>
+                        <mask id="headerCut">
+                            <rect width="140" height="130" fill="white"/>
+                            <rect x="0" y="70" width="94" height="40" fill="black"/>
+                        </mask>
+                    </defs>
+                    <polygon points="60,15 10,100 110,100" fill="none" stroke="#2D2D3A" stroke-width="12" stroke-linejoin="miter" mask="url(#headerCut)"/>
+                    <text x="94" y="104.5" font-family="Inter, sans-serif" font-weight="900" font-size="18.5" letter-spacing="2" fill="#2D2D3A" text-anchor="end">&#x039B;LIGN&#x039B;</text>
+                    <text x="60" y="125" font-family="'Playfair Display', serif" font-weight="400" font-size="11" fill="#666" text-anchor="middle">by Beresneva</text>
                 </svg>
             </a>
             <nav class="nav" id="nav">
@@ -92,12 +98,18 @@ function renderFooter() {
     footer.innerHTML = `
         <div class="container footer-inner">
             <div class="footer-brand">
-                <svg viewBox="0 0 180 50" class="footer-logo" aria-label="ALIGNA by Beresneva">
-                    <polygon points="25,3 47,42 3,42" fill="none" stroke="#fff" stroke-width="2.5"/>
-                    <text x="62" y="22" font-family="Inter,sans-serif" font-weight="700" font-size="14" letter-spacing="5" fill="#fff">ALIGNA</text>
-                    <text x="62" y="38" font-family="Playfair Display,serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.6)">by Beresneva</text>
+                <svg viewBox="0 0 140 130" class="footer-logo" aria-label="ALIGNA by Beresneva" style="height: 54px; width: auto; overflow: visible; opacity: 0.9;">
+                    <defs>
+                        <mask id="footerCut">
+                            <rect width="140" height="130" fill="white"/>
+                            <rect x="0" y="70" width="94" height="40" fill="black"/>
+                        </mask>
+                    </defs>
+                    <polygon points="60,15 10,100 110,100" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="miter" mask="url(#footerCut)"/>
+                    <text x="94" y="104.5" font-family="Inter, sans-serif" font-weight="900" font-size="18.5" letter-spacing="2" fill="#fff" text-anchor="end">&#x039B;LIGN&#x039B;</text>
+                    <text x="60" y="125" font-family="'Playfair Display', serif" font-weight="400" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">by Beresneva</text>
                 </svg>
-                <p class="footer-desc">Премиальная зуботехническая лаборатория в Москве. Ортодонтические аппараты и реставрации.</p>
+                <p class="footer-desc" style="margin-top: 16px;">Премиальная зуботехническая лаборатория в Москве. Ортодонтические аппараты и реставрации.</p>
             </div>
             <div class="footer-links">
                 <h4>Навигация</h4>
