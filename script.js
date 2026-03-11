@@ -377,7 +377,7 @@ function initCalculator() {
                 <option value="marcorosa" data-price="8000">Аппарат Marco Rosa</option>
                 <option value="retainer" data-price="2000">Проволочный ретейнер</option>
             `;
-            optionsRow.style.display = 'flex';
+            optionsRow.style.display = 'grid';
         }
         calculateTotal();
     }

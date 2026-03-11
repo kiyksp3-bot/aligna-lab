@@ -1153,8 +1153,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     margin-bottom: 24px;
 }
 @media (max-width: 768px) {
+    .calc-content {
+        padding: 32px 24px;
+        min-width: 100%;
+    }
     .calc-result {
+        padding: 32px 24px;
         border-left: none;
         border-top: 1px solid rgba(0,0,0,0.03);
+        min-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .calc-content, .calc-result {
+        padding: 24px 16px;
+    }
+    .calc-result-value {
+        font-size: 2rem;
     }
 }
