@@ -80,19 +80,15 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-row align-items-end" id="calcOptionsRow">
-                            <div class="form-group" style="margin-bottom: 0;">
-                                <label class="checkbox-label" style="display:flex; align-items:center; gap:8px;">
-                                    <input type="checkbox" id="calcDesign" value="500">
-                                    <span>Индивидуальный дизайн (+500 ₽)</span>
-                                </label>
-                            </div>
-                            <div class="form-group" style="margin-bottom: 0;">
-                                <label class="checkbox-label" style="display:flex; align-items:center; gap:8px;">
-                                    <input type="checkbox" id="calcScan" value="1000">
-                                    <span>Скан/модель (+1000 ₽)</span>
-                                </label>
-                            </div>
+                        <div id="calcOptionsRow" style="display:flex; gap:24px; flex-wrap:wrap;">
+                            <label class="checkbox-label" style="display:flex; align-items:center; gap:10px; cursor:pointer; width: max-content;">
+                                <input type="checkbox" id="calcDesign" value="500" style="width:18px; height:18px; margin:0; flex-shrink:0;">
+                                <span>Индивидуальный дизайн <span style="color:var(--gray);">(+500 ₽)</span></span>
+                            </label>
+                            <label class="checkbox-label" style="display:flex; align-items:center; gap:10px; cursor:pointer; width: max-content;">
+                                <input type="checkbox" id="calcScan" value="1000" style="width:18px; height:18px; margin:0; flex-shrink:0;">
+                                <span>Скан/модель <span style="color:var(--gray);">(+1000 ₽)</span></span>
+                            </label>
                         </div>
                     </form>
                 </div>
