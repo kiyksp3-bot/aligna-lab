@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — ALIGNA by Beresneva</title>
+    <meta name="description" content="Портфолио работ зуботехнической лаборатории ALIGNA. Элайнеры, ортодонтические пластинки, аппараты Marco Rosa и другие работы.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
+
+    <section class="page-header">
+        <div class="container text-center">
+            <div class="section-label">Портфолио</div>
+            <h1 class="section-title">Наши <span>работы</span></h1>
+            <p class="section-subtitle">Каждое изделие создано с вниманием к мельчайшим деталям. Все фото — реальные работы лаборатории.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="appliances">Несъёмные аппараты</button>
+                <button class="filter-btn" data-filter="plates">Пластинки</button>
+                <button class="filter-btn" data-filter="models">Модели</button>
+                <button class="filter-btn" data-filter="packaging">Упаковка</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal" data-category="appliances">
+                    <img src="img/work-1.png" alt="Ортодонтический расширитель с зелёным акрилом">
+                    <span class="portfolio-item-label">Расширяющий аппарат</span>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" data-category="models">
+                    <img src="img/work-2.png" alt="Зубные модели с керамическими коронками">
+                    <span class="portfolio-item-label">Модели с коронками</span>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" data-category="plates">
+                    <img src="img/work-3.png" alt="Аппарат Marco Rosa с дизайном Маша и Медведь">
+                    <span class="portfolio-item-label">Marco Rosa — детский дизайн</span>
+                </div>
+                <div class="portfolio-item reveal" data-category="packaging">
+                    <img src="img/work-4.png" alt="Фирменная упаковка ALIGNA с аппаратом">
+                    <span class="portfolio-item-label">Премиум упаковка</span>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" data-category="appliances">
+                    <img src="img/work-5.png" alt="Металлический каркас и элайнер">
+                    <span class="portfolio-item-label">Металлический каркас + элайнер</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">✕</span>
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Хотите увидеть больше?</h2>
+            <p>Подписывайтесь на наш Instagram — публикуем новые работы каждую неделю</p>
+            <div class="cta-actions">
+                <a href="https://www.instagram.com/aligna_lab" target="_blank" class="btn btn-white">Instagram →</a>
+                <a href="contacts.html" class="btn btn-outline" style="border-color: var(--dark);">Оставить заявку</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

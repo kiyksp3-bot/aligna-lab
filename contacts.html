@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — ALIGNA by Beresneva</title>
+    <meta name="description" content="Свяжитесь с зуботехнической лабораторией ALIGNA. Telegram, заявка на сайте, адрес в Москве.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
+
+    <section class="page-header">
+        <div class="container text-center">
+            <div class="section-label">Контакты</div>
+            <h1 class="section-title">Свяжитесь <span>с нами</span></h1>
+            <p class="section-subtitle">Мы всегда рады новому сотрудничеству и готовы ответить на любые вопросы</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contacts-grid">
+                <div>
+                    <h2 class="section-title" style="font-size: 1.8rem;">Наши <span>контакты</span></h2>
+                    <p style="color: var(--gray); margin-top: 8px;">Выберите удобный способ связи. Мы обычно отвечаем в течение часа в рабочее время.</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item reveal">
+                            <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                            <div>
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/dr_beresneva" target="_blank">@dr_beresneva</a>
+                                <p>Самый быстрый способ связи</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item reveal reveal-delay-1">
+                            <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <a href="https://www.instagram.com/aligna_lab" target="_blank">@aligna_lab</a>
+                                <p>Следите за нашими работами</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item reveal reveal-delay-2">
+                            <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                            <div>
+                                <h4>Телефон</h4>
+                                <p>+7 (___) ___-__-__ <br><small style="color: var(--pink-dark);">Скоро будет доступен</small></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item reveal">
+                            <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div>
+                                <h4>Адрес</h4>
+                                <p>г. Москва, ул. Примерная, д. 10, оф. 305</p>
+                                <p><small>Пн-Пт: 9:00 — 18:00</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal" id="contactFormWrapper">
+                    <h3>Оставьте заявку</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ваше имя *</label>
+                                <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                            </div>
+                            <div class="form-group">
+                                <label for="clinic">Клиника</label>
+                                <input type="text" id="clinic" name="clinic" placeholder="Название клиники">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Интересующая услуга</label>
+                            <select id="service" name="service">
+                                <option value="">Выберите услугу</option>
+                                <option>Ортодонтические пластинки</option>
+                                <option>Элайнеры и каппы</option>
+                                <option>Несъёмные аппараты</option>
+                                <option>Каппы и сплинты</option>
+                                <option>Ретейнеры</option>
+                                <option>3D-моделирование</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" placeholder="Опишите вашу задачу или вопрос..."></textarea>
+                        </div>
+                        <div class="form-consent">
+                            <input type="checkbox" id="consentCheckbox" required>
+                            <label for="consentCheckbox">Я даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> в соответствии с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
