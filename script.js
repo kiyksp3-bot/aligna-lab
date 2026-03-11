@@ -349,6 +349,102 @@ function initFloatingTelegram() {
     document.body.appendChild(btn);
 }
 
+// ── Interactive Price Calculator ──
+function initCalculator() {
+    const form = document.getElementById('priceCalc');
+    const typeSelect = document.getElementById('calcType');
+    const applianceSelect = document.getElementById('calcAppliance');
+    const optionsRow = document.getElementById('calcOptionsRow');
+    const totalDisplay = document.getElementById('calcTotal');
+    const checks = document.querySelectorAll('#priceCalc input[type="checkbox"]');
+
+    if (!form) return;
+
+    function updateOptions() {
+        if (typeSelect.value === 'adult') {
+            applianceSelect.innerHTML = `
+                <option value="aligner" data-price="40000">Элайнеры (1 челюсть)</option>
+                <option value="aligners" data-price="75000">Элайнеры (2 челюсти)</option>
+                <option value="retainer" data-price="2000">Проволочный ретейнер</option>
+                <option value="splint" data-price="8000">Окклюзионный сплинт</option>
+            `;
+            optionsRow.style.display = 'none';
+            checks.forEach(c => c.checked = false);
+        } else {
+            applianceSelect.innerHTML = `
+                <option value="plate1" data-price="4000">Пластинка (1 винт)</option>
+                <option value="plate2" data-price="5500">Пластинка (2 винта)</option>
+                <option value="marcorosa" data-price="8000">Аппарат Marco Rosa</option>
+                <option value="retainer" data-price="2000">Проволочный ретейнер</option>
+            `;
+            optionsRow.style.display = 'flex';
+        }
+        calculateTotal();
+    }
+
+    function calculateTotal() {
+        let total = 0;
+        const selectedOption = applianceSelect.options[applianceSelect.selectedIndex];
+        if (selectedOption) {
+            total += parseInt(selectedOption.dataset.price);
+        }
+        
+        if (typeSelect.value === 'child') {
+            checks.forEach(chk => {
+                if (chk.checked) total += parseInt(chk.value);
+            });
+        }
+        
+        totalDisplay.textContent = total.toLocaleString() + ' ₽';
+    }
+
+    typeSelect.addEventListener('change', updateOptions);
+    applianceSelect.addEventListener('change', calculateTotal);
+    checks.forEach(chk => chk.addEventListener('change', calculateTotal));
+
+    // Initial calc
+    updateOptions();
+}
+
+// ── FAQ Accordion ──
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+}
+
+// ── Before/After Slider ──
+function initBeforeAfterSlider() {
+    const sliders = document.querySelectorAll('.ba-slider');
+    if (!sliders.length) return;
+
+    sliders.forEach(slider => {
+        const input = slider.querySelector('.ba-slider-input');
+        const overlay = slider.querySelector('.ba-overlay');
+        const line = slider.querySelector('.ba-slider-line');
+        const button = slider.querySelector('.ba-slider-button');
+
+        function updateSlider() {
+            const val = input.value;
+            overlay.style.width = `${val}%`;
+            line.style.left = `${val}%`;
+            button.style.left = `${val}%`;
+        }
+
+        input.addEventListener('input', updateSlider);
+        // init
+        updateSlider();
+    });
+}
+
 // ── Initialize Everything ──
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
@@ -361,4 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initServicesSidebar();
     initContactForm();
     initFloatingTelegram();
+    initCalculator();
+    initFAQ();
+    initBeforeAfterSlider();
 });

@@ -11,6 +11,32 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "ALIGNA by Beresneva",
+      "legalName": "ООО АЛИГНА",
+      "url": "https://kiyksp3-bot.github.io/aligna-lab/",
+      "logo": "https://kiyksp3-bot.github.io/aligna-lab/img/aligna-logo.png",
+      "description": "Премиальная зуботехническая лаборатория в Москве. Элайнеры, ортодонтические пластинки, каппы, ретейнеры.",
+      "telephone": "+7 (000) 000-00-00",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Примерная, д. 10, оф. 305",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+7 (000) 000-00-00",
+        "url": "https://t.me/dr_beresneva"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -169,19 +195,19 @@
 
             <div class="portfolio-grid" style="margin-top: 40px;">
                 <div class="portfolio-item reveal" data-category="appliances">
-                    <img src="img/work-1.png" alt="Ортодонтический аппарат с расширителем">
+                    <img src="img/work-1.png" alt="Ортодонтический аппарат с расширителем" loading="lazy">
                     <span class="portfolio-item-label">Расширяющий аппарат</span>
                 </div>
                 <div class="portfolio-item reveal reveal-delay-1" data-category="models">
-                    <img src="img/work-2.png" alt="Зубные модели с коронками">
+                    <img src="img/work-2.png" alt="Зубные модели с коронками" loading="lazy">
                     <span class="portfolio-item-label">Модели с коронками</span>
                 </div>
                 <div class="portfolio-item reveal reveal-delay-2" data-category="plates">
-                    <img src="img/work-3.png" alt="Пластинка Marco Rosa с дизайном Маша и Медведь">
+                    <img src="img/work-3.png" alt="Пластинка Marco Rosa с дизайном Маша и Медведь" loading="lazy">
                     <span class="portfolio-item-label">Marco Rosa — детский дизайн</span>
                 </div>
                 <div class="portfolio-item reveal" data-category="packaging">
-                    <img src="img/work-4.png" alt="Фирменная упаковка ALIGNA с аппаратом">
+                    <img src="img/work-4.png" alt="Фирменная упаковка ALIGNA с аппаратом" loading="lazy">
                     <span class="portfolio-item-label">Премиум упаковка</span>
                 </div>
             </div>
@@ -237,6 +263,61 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section">
+        <div class="container text-center">
+            <div class="section-label">Отзывы</div>
+            <h2 class="section-title">Что говорят <span>врачи</span></h2>
+            <p class="section-subtitle">Гордимся доверием ведущих ортодонтов Москвы</p>
+
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 48px; text-align: left;">
+                
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>Раньше постоянно сталкивалась с балансирующими пластинками и плохой посадкой элайнеров. С переходом в ALIGNA эти проблемы ушли. Очень точная посадка с первого раза и великолепная эстетика детских аппаратов.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:#f5c6d0; display:flex; align-items:center; justify-content:center; border-radius:50%; width:48px; height:48px; font-weight:bold; color:var(--pink-dark)">АО</div>
+                        <div class="author-info">
+                            <strong>Анна Орлова</strong>
+                            <span>Врач-ортодонт, К.М.Н.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>Лаборатория, которая действительно слышит врача. Отличный цифровой протокол, быстрое согласование 3D-моделей и соблюдение сроков. Аппараты Marco Rosa — выше всяких похвал. Рекомендую коллегам!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:#d5e0f5; display:flex; align-items:center; justify-content:center; border-radius:50%; width:48px; height:48px; font-weight:bold; color:var(--blue)">МК</div>
+                        <div class="author-info">
+                            <strong>Михаил Ковальчук</strong>
+                            <span>Главный врач клиники "Дентал-Люкс"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>Сотрудничаем уже больше года. Нравится стабильное качество и возможность обсудить сложный случай напрямую с техником. Пациенты в восторге от премиальной упаковки аппаратов.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:#c8f0d8; display:flex; align-items:center; justify-content:center; border-radius:50%; width:48px; height:48px; font-weight:bold; color:#1b7a42">ЕС</div>
+                        <div class="author-info">
+                            <strong>Елена Смирнова</strong>
+                            <span>Детский стоматолог-ортодонт</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ═══ BLOG PREVIEW ═══ -->
@@ -248,7 +329,7 @@
 
             <div class="blog-grid" style="text-align: left;">
                 <div class="blog-card reveal">
-                    <div class="blog-card-image"><img src="img/blog-orthodontics.png" alt="Ортодонтические аппараты"></div>
+                    <div class="blog-card-image"><img src="img/blog-orthodontics.png" alt="Ортодонтические аппараты" loading="lazy"></div>
                     <div class="blog-card-body">
                         <div class="blog-card-meta">
                             <span class="blog-card-tag">Ортодонтия</span>
@@ -260,7 +341,7 @@
                     </div>
                 </div>
                 <div class="blog-card reveal reveal-delay-1">
-                    <div class="blog-card-image"><img src="img/blog-3d-modeling.png" alt="3D-моделирование в лаборатории"></div>
+                    <div class="blog-card-image"><img src="img/blog-3d-modeling.png" alt="3D-моделирование в лаборатории" loading="lazy"></div>
                     <div class="blog-card-body">
                         <div class="blog-card-meta">
                             <span class="blog-card-tag">Технологии</span>
@@ -272,7 +353,7 @@
                     </div>
                 </div>
                 <div class="blog-card reveal reveal-delay-2">
-                    <div class="blog-card-image"><img src="img/blog-children.png" alt="Детские ортодонтические пластинки"></div>
+                    <div class="blog-card-image"><img src="img/blog-children.png" alt="Детские ортодонтические пластинки" loading="lazy"></div>
                     <div class="blog-card-body">
                         <div class="blog-card-meta">
                             <span class="blog-card-tag">Детям</span>

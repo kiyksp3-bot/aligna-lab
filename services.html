@@ -6,6 +6,36 @@
     <title>Услуги и цены — ALIGNA by Beresneva</title>
     <meta name="description" content="Подробный прайс-лист зуботехнической лаборатории ALIGNA. Элайнеры, ортодонтические пластинки, несъёмные аппараты, каппы, ретейнеры, 3D-моделирование.">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Какие сроки изготовления ортодонтических аппаратов?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Стандартные сроки: детские пластинки — 5-7 дней, каппы и ретейнеры — 3-5 дней, элайнеры — от 7 рабочих дней в зависимости от сложности плана лечения."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Есть ли у вас курьерская доставка по Москве?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, у нас есть собственная курьерская служба. Забор слепков и доставка готовых аппаратов по Москве стоит 500 ₽ и осуществляется на следующий рабочий день."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Работаете ли вы с внутриротовыми сканами?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, мы принимаем цифровые сканы в формате STL и PLY. Вы можете загрузить их через личный кабинет врача или отправить на нашу рабочую почту."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
     <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
@@ -20,6 +50,57 @@
             <div class="page-images-row">
                 <div class="page-image reveal"><img src="img/services-equipment.png" alt="Оборудование зуботехнической лаборатории"></div>
                 <div class="page-image reveal reveal-delay-1"><img src="img/services-tools.png" alt="Инструменты зубного техника"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section class="section" style="background: var(--bg-alt); padding-top: 40px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="calc-card reveal">
+                <div class="calc-content">
+                    <h2>Калькулятор стоимости</h2>
+                    <p style="color: var(--gray); margin-bottom: 24px;">Рассчитайте примерную стоимость аппарата для вашего пациента. Окончательная цена может зависеть от индивидуальных особенностей.</p>
+                    <form id="priceCalc">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Тип лечения</label>
+                                <select id="calcType">
+                                    <option value="child">Детская ортодонтия</option>
+                                    <option value="adult">Взрослая ортодонтия</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Вид аппарата</label>
+                                <select id="calcAppliance">
+                                    <option value="plate1" data-price="4000">Пластинка (1 винт)</option>
+                                    <option value="plate2" data-price="5500">Пластинка (2 винта)</option>
+                                    <option value="marcorosa" data-price="8000">Аппарат Marco Rosa</option>
+                                    <option value="retainer" data-price="2000">Проволочный ретейнер</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-end" id="calcOptionsRow">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label class="checkbox-label" style="display:flex; align-items:center; gap:8px;">
+                                    <input type="checkbox" id="calcDesign" value="500">
+                                    <span>Индивидуальный дизайн (+500 ₽)</span>
+                                </label>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label class="checkbox-label" style="display:flex; align-items:center; gap:8px;">
+                                    <input type="checkbox" id="calcScan" value="1000">
+                                    <span>Скан/модель (+1000 ₽)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="calc-result">
+                    <div class="calc-result-label">Примерная стоимость:</div>
+                    <div class="calc-result-value" id="calcTotal">4 000 ₽</div>
+                    <a href="contacts.html" class="btn btn-primary" style="width:100%; text-align:center;">Заказать изготовление</a>
+                </div>
             </div>
         </div>
     </section>
@@ -175,6 +256,35 @@
                         </table>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">Частые <span>вопросы</span></h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question">Какие сроки изготовления ортодонтических аппаратов?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Стандартные сроки: детские пластинки — 5-7 дней, каппы и ретейнеры — 3-5 дней, элайнеры — от 7 рабочих дней в зависимости от сложности плана лечения.</p></div>
+                </div>
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question">Есть ли у вас курьерская доставка по Москве?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Да, у нас есть собственная курьерская служба. Забор слепков и доставка готовых аппаратов по Москве стоит 500 ₽ и осуществляется на следующий рабочий день. Также мы отправляем аппараты СДЭКом по всей России.</p></div>
+                </div>
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question">Работаете ли вы с внутриротовыми сканами (STL)?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Да, мы принимаем цифровые сканы в формате STL и PLY. Наша лаборатория полностью интегрирована с цифровым протоколом. Вы можете прислать сканы на почту или загрузить их в облако.</p></div>
+                </div>
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question">Какую гарантию на аппараты вы предоставляете?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Мы даем гарантию 3-6 месяцев на пластинки и каппы (в зависимости от соблюдения пациентом правил ношения). В случае поломки аппарата по вине лаборатории переделка осуществляется за наш счет в кратчайшие сроки.</p></div>
                 </div>
             </div>
         </div>

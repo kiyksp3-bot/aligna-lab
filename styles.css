@@ -1112,3 +1112,49 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     .filter-bar { gap: 8px; }
     .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
 }
+
+/* ── Calculator ── */
+.calc-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.calc-content {
+    flex: 2;
+    padding: 40px;
+    min-width: 320px;
+}
+.calc-result {
+    flex: 1;
+    background: var(--gradient-soft);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid rgba(0,0,0,0.03);
+    min-width: 250px;
+}
+.calc-result-label {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 8px;
+    text-align: center;
+}
+.calc-result-value {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--pink-dark);
+    text-align: center;
+    margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+    .calc-result {
+        border-left: none;
+        border-top: 1px solid rgba(0,0,0,0.03);
+    }
+}

@@ -28,6 +28,28 @@
                 <button class="filter-btn" data-filter="packaging">Упаковка</button>
             </div>
 
+            <!-- Before / After Interactive Slider -->
+            <div class="ba-slider-container reveal" style="margin-bottom: 60px;">
+                <h3 class="text-center" style="margin-bottom:24px; font-family:var(--font-display);">До и После (Интерактивный пример)</h3>
+                <div class="ba-slider">
+                    <!-- Base Image (After) -->
+                    <img src="img/work-3.png" alt="Готовая работа" class="ba-base-img" loading="lazy">
+                    
+                    <!-- Clipping Image (Before) -->
+                    <div class="ba-overlay">
+                        <img src="img/work-2.png" alt="До лечения" loading="lazy">
+                    </div>
+                    
+                    <!-- Range Input Control -->
+                    <input type="range" min="0" max="100" value="50" class="ba-slider-input" aria-label="Сравнение до и после">
+                    <div class="ba-slider-line"></div>
+                    <div class="ba-slider-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </div>
+                </div>
+            </div>
+
             <div class="portfolio-grid">
                 <div class="portfolio-item reveal" data-category="appliances">
                     <img src="img/work-1.png" alt="Ортодонтический расширитель с зелёным акрилом">
